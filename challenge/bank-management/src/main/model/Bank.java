@@ -80,7 +80,7 @@ public class Bank {
         return Arrays.stream(transactions)
                .mapToDouble((transaction) -> {
                    switch (transaction.getType()) {
-                       case WITHDRAW: return -transaction.getAmount(); 
+                       case WITHDRAW: return transaction.getAmount(); 
                        case DEPOSIT: return transaction.getAmount();
                        default: return 0;
 
